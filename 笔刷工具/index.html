@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>涂鸦</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/handWriting.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <canvas class="offCanvas"></canvas>
+        <canvas class="canvas"></canvas>
+    </div>
+    <div class="footer">
+        <div class="control-button">
+            <div class="item colorButton"><img src="images/colors.png" alt=""><span>黑色</span></div>
+            <div class="item sizeButton"><img src="images/size.png" alt=""><span>中笔</span></div>
+            <div class="item bgButton"><img src="images/bg.png" alt=""><span>背景</span></div>
+            <div class="item rubberButton"><img src="images/rubber.png" alt=""><span>擦掉</span></div>
+            <div class="item historyButton"><img src="images/history.png" alt=""><span>历史</span></div>
+            <div class="item clearButton"><img src="images/clear.png" alt=""><span>清屏</span></div>
+            <div class="item saveButton"><img src="images/save.png" alt=""><span>保存</span></div>
+        </div>
+        <div class="pop-up colors-panel">
+            <div class="title">笔触颜色<span class="closeBtn"></span></div>
+            <div class="colors">
+                <div class="lineColors">
+                    <div><span class="red" data-text="红色" data-color="#ff0000"></span></div>
+                    <div><span class="blue" data-text="蓝色" data-color="#0000ff"></span></div>
+                    <div><span class="green" data-text="绿色" data-color="#00ff00"></span></div>
+                    <div><span class="black" data-text="黑色" data-color="#000000"></span></div>
+                    <div><span class="orange" data-text="橙色" data-color="#ff6302"></span></div>
+                </div>
+                <div class="lineColors">
+                    <div><span class="red" data-text="红色" data-color="#ff0000"></span></div>
+                    <div><span class="blue" data-text="蓝色" data-color="#0000ff"></span></div>
+                    <div><span class="green" data-text="绿色" data-color="#00ff00"></span></div>
+                    <div><span class="black" data-text="黑色" data-color="#000000"></span></div>
+                    <div><span class="orange" data-text="橙色" data-color="#ff6302"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-up size-panel">
+            <div class="title">笔触大小<span class="closeBtn"></span></div>
+            <div class="sizes">
+                <div class="lineSizes"><span data-lineWidth="10" data-text="大笔" class="big"></span></div>
+                <div class="lineSizes"><span data-lineWidth="30" data-text="中笔" class="middle"></span></div>
+                <div class="lineSizes"><span data-lineWidth="50" data-text="小笔" class="small"></span></div>
+            </div>
+        </div>
+        <div class="pop-up bg-panel">
+            <div class="title">推荐背景<span class="closeBtn"></span></div>
+            <div class="list">
+                <img src="images/bj.png" alt="" />
+                <img src="images/bj.png" alt="" />
+                <img src="images/bj.png" alt="" />
+                <img src="images/bj.png" alt="" />
+                <img src="images/bj.png" alt="" />
+            </div>
+        </div>
+        <!-- 添加橡皮檫列表和历史记录列表样式 -->
+        <div class="pop-up rubber-panel">
+            <div class="title">橡皮檫大小<span class="closeBtn"></span></div>
+            <div class="rubbers">
+                <div class="first">大小：</div>
+                <div class="second"><input type="range" min="1" max="50" value="25" step="1" name="大小" /></div>
+                <div class="last"><span class="rubberSize">25</span>像素</div>
+            </div>
+        </div>
+        <div class="pop-up history-panel">
+            <div class="title">历史记录<span class="closeBtn"></span></div>
+            <div class="history">
+                <div class="lineBox"></div>
+            </div>
+        </div>
+    </div>
+    <div class="offImgs" style="display: none;"></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/handWriting.js"></script>
+	
+</body>
+</html>
